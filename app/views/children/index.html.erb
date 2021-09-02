@@ -1,0 +1,12 @@
+<h1>Here will be all the Children</h1>
+
+<% if user_signed_in? %>
+  <%= link_to 'Add a Child', new_child_path %>
+<% end %>
+<%= link_to 'Back', root_path %>
+
+<% @children.each do |child| %>
+  <h1> <%= link_to child.name, child %> </h1>
+  <h3> <%= child.age %> </h3>
+  <hr/>
+<% end %>

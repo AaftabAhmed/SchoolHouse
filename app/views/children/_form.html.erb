@@ -1,0 +1,45 @@
+<%= form_with model: child, local: true do |f| %>
+  <div class="field">
+    <% f.label :name %> <br/>
+    <%= f.text_field :name, placeholder:"Name" %> <br/>
+    <% child.errors.full_messages_for(:name).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <% f.label :age %> <br/>
+    <%= f.number_field :age, placeholder:"Age" %> <br/>
+    <% child.errors.full_messages_for(:age).each do |message| %>
+     <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <% f.label :grade %> <br/>
+    <%= f.select :grade, Child.grades.keys %> <br/>
+    <% child.errors.full_messages_for(:grade).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <% f.label :description %> <br/>
+    <%= f.text_field :description, placeholder:"Description" %> <br/>
+    <% child.errors.full_messages_for(:description).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="field">
+    <% f.label :gender %> <br/>
+    <%= f.select :gender, Child.genders.keys %> <br/>
+    <% child.errors.full_messages_for(:gender).each do |message| %>
+      <div><%= message %></div>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
