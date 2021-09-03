@@ -25,7 +25,7 @@
 
   <div class="field">
     <% f.label :description %> <br/>
-    <%= f.text_field :description, placeholder:"Description" %> <br/>
+    <%= f.text_area :description, placeholder:"Description" %> <br/>
     <% child.errors.full_messages_for(:description).each do |message| %>
       <div><%= message %></div>
     <% end %>
