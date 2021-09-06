@@ -56,3 +56,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Devise Gem
 gem 'devise'
+
+# Active Admin Gem
+gem 'activeadmin'

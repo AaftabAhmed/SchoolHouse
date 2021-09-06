@@ -1,6 +1,7 @@
 class Child < ApplicationRecord
 
   belongs_to :user
+  has_one :address, as: :addressable
 
   validates :name, :age, :gender, :grade, presence: true
 

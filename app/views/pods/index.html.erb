@@ -1,0 +1,10 @@
+<h1>PODS</h1>
+
+<% @pods.each do |pod| %>
+  <h1> <%= pod.name %> </h1>
+  <h3> <%= pod.description %> </h3>
+  <h3> <%= pod.start_time.strftime("%I:%M %p") %> </h3>
+  <h3> <%= pod.end_time.strftime("%I:%M %p") %> </h3>
+  <h3> Teacher : <%= pod.teacher.name %> ( <%= pod.teacher.qualification %> ) </h3>
+  <hr/>
+<% end %>
