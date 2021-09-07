@@ -1,15 +1,9 @@
 <% if user_signed_in? %>
-  <% if current_user.admin? %>
-    <%= link_to "Add Teacher", new_teacher_path %>
-  <% else %>
-    <%= link_to "PROFILE", children_path %>
-  <%= link_to "TEACHERS", teachers_index_path %>
-  <%= link_to "PODS", root_path %>
-  <% end %>
+  <%= link_to "PROFILE", profile_path %>
   <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
 <% else %>
   <%= link_to "Sign In", user_session_path %>
   <%= link_to "Sign Up", new_user_registration_path %>
-  <%= link_to "TEACHERS", teachers_index_path %>
-  <%= link_to "PODS", root_path %>
 <% end %>
+<%= link_to "TEACHERS", teachers_path %>
+<%= link_to "Home", root_path %>

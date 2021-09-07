@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
-  get 'teachers/index'
+  get '/profile' => 'profiles#show'
+  get '/teachers' => 'teachers#index'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   root 'pods#index'
