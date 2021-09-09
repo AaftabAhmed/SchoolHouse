@@ -3,7 +3,7 @@ class CreatePodRequests < ActiveRecord::Migration[6.0]
     create_table :pod_requests do |t|
       t.belongs_to :child
       t.belongs_to :pod
-      t.integer :status
+      t.integer :status, default: 0
 
       t.timestamps
     end

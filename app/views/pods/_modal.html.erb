@@ -1,0 +1,27 @@
+<!-- Modal -->
+<% if user_signed_in?%>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Children</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+
+      <div class="modal-body">
+        <%= form_with url:'/pod_requests', method: :post, local: true do |f| %>
+          <% current_user.children.each do |child|%>
+            <%= check_box_tag "child_ids[]", child.id %>
+            <%= child.name %> <br/>
+          <% end %>
+          <%= f.hidden_field :pod_id %>
+      </div>
+      <div class="modal-footer">
+        <%= f.submit value:'Send', class:"btn btn-primary" %>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</div>
+<% end %>

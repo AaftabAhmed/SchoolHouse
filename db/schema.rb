@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(version: 2021_09_07_112451) do
   create_table "pod_requests", force: :cascade do |t|
     t.integer "child_id"
     t.integer "pod_id"
-    t.integer "status"
+    t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["child_id"], name: "index_pod_requests_on_child_id"

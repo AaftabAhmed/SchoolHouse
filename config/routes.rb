@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   root 'pods#index'
   devise_for :users
   resources :children
+  resources :pod_requests
 
 end

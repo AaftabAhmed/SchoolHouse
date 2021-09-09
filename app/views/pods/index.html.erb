@@ -6,5 +6,13 @@
   <h3> <%= pod.start_time.strftime("%I:%M %p") %> </h3>
   <h3> <%= pod.end_time.strftime("%I:%M %p") %> </h3>
   <h3> Teacher : <%= pod.teacher.name %> ( <%= pod.teacher.qualification %> ) </h3>
+
+  <% if user_signed_in?%>
+    <button type="button" class="btn btn-primary req_button" data-bs-toggle="modal" data-bs-target="#exampleModal" value=<%=pod.id%> >
+      Apply
+    </button>
+  <% end %>
   <hr/>
 <% end %>
+
+<%= render "modal" %>
