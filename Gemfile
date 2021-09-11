@@ -59,3 +59,6 @@ gem 'devise'
 
 # Active Admin Gem
 gem 'activeadmin'
+
+# Ransack Gem
+gem 'ransack'

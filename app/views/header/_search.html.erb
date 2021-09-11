@@ -1,0 +1,6 @@
+<%= search_form_for @q do |f| %>
+  <% f.label :name_cont %>
+  <%= f.search_field :name_or_address_city_or_address_zipcode_cont, placeholder:"Search POD..." %>
+  <%= f.submit name: nil %>
+<% end %>
+Search by Name, City or Zipcode
